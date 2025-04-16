@@ -1,0 +1,1266 @@
+Simulação 1
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-1.00):
+{0: 'z', 1: 'z', 2: 'z', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:43:18
+
+Convergência atingida após 1 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:43:19
+Tempo Total de Simulação: 0.76 segundos
+Taxa de Mudança: 0.00
+Taxa de Convergência: 100.00%
+================================================================================
+
+Simulação 2
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.60):
+{0: 'z', 1: 'z', 2: 'z', 3: 'z', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:43:19
+
+Convergência atingida após 14 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:43:27
+Tempo Total de Simulação: 7.98 segundos
+Taxa de Mudança: 0.07
+Taxa de Convergência: 7.14%
+================================================================================
+
+Simulação 3
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.20):
+{0: 'z', 1: 'k', 2: 'z', 3: 'z', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:43:27
+
+Convergência atingida após 3 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:43:29
+Tempo Total de Simulação: 1.79 segundos
+Taxa de Mudança: 1.00
+Taxa de Convergência: 33.33%
+================================================================================
+
+Simulação 4
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.20):
+{0: 'z', 1: 'z', 2: 'k', 3: 'k', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:43:29
+
+Convergência atingida após 4 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:43:31
+Tempo Total de Simulação: 2.38 segundos
+Taxa de Mudança: 0.50
+Taxa de Convergência: 25.00%
+================================================================================
+
+Simulação 5
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.60):
+{0: 'z', 1: 'k', 2: 'z', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:43:31
+
+Convergência atingida após 2 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:43:32
+Tempo Total de Simulação: 1.07 segundos
+Taxa de Mudança: 0.50
+Taxa de Convergência: 50.00%
+================================================================================
+
+Simulação 6
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.60):
+{0: 'z', 1: 'k', 2: 'z', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:43:32
+
+Convergência atingida após 1 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:43:33
+Tempo Total de Simulação: 0.40 segundos
+Taxa de Mudança: 1.00
+Taxa de Convergência: 100.00%
+================================================================================
+
+Simulação 7
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.60):
+{0: 'k', 1: 'k', 2: 'z', 3: 'k', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:43:33
+
+Convergência atingida após 7 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:43:37
+Tempo Total de Simulação: 3.75 segundos
+Taxa de Mudança: 0.14
+Taxa de Convergência: 14.29%
+================================================================================
+
+Simulação 8
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.20):
+{0: 'z', 1: 'z', 2: 'k', 3: 'z', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:43:37
+
+Convergência atingida após 5 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:43:39
+Tempo Total de Simulação: 2.62 segundos
+Taxa de Mudança: 0.40
+Taxa de Convergência: 20.00%
+================================================================================
+
+Simulação 9
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.60):
+{0: 'z', 1: 'z', 2: 'z', 3: 'k', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:43:39
+
+Convergência atingida após 1 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:43:40
+Tempo Total de Simulação: 0.51 segundos
+Taxa de Mudança: 1.00
+Taxa de Convergência: 100.00%
+================================================================================
+
+Simulação 10
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.60):
+{0: 'k', 1: 'k', 2: 'k', 3: 'k', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:43:40
+
+Convergência atingida após 2 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:43:41
+Tempo Total de Simulação: 0.99 segundos
+Taxa de Mudança: 0.50
+Taxa de Convergência: 50.00%
+================================================================================
+
+Simulação 11
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.20):
+{0: 'k', 1: 'z', 2: 'z', 3: 'z', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:43:41
+
+Convergência atingida após 6 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:43:45
+Tempo Total de Simulação: 3.81 segundos
+Taxa de Mudança: 0.50
+Taxa de Convergência: 16.67%
+================================================================================
+
+Simulação 12
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.60):
+{0: 'z', 1: 'k', 2: 'z', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:43:45
+
+Convergência atingida após 2 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:43:46
+Tempo Total de Simulação: 1.32 segundos
+Taxa de Mudança: 0.50
+Taxa de Convergência: 50.00%
+================================================================================
+
+Simulação 13
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'k', 1: 'z', 2: 'z', 3: 'k', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:43:46
+
+Convergência atingida após 8 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:43:50
+Tempo Total de Simulação: 3.88 segundos
+Taxa de Mudança: 0.25
+Taxa de Convergência: 12.50%
+================================================================================
+
+Simulação 14
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'z', 1: 'z', 2: 'k', 3: 'k', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:43:50
+
+Convergência atingida após 4 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:43:52
+Tempo Total de Simulação: 2.01 segundos
+Taxa de Mudança: 0.50
+Taxa de Convergência: 25.00%
+================================================================================
+
+Simulação 15
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'k', 1: 'z', 2: 'k', 3: 'k', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:43:52
+
+Convergência atingida após 4 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:43:54
+Tempo Total de Simulação: 2.18 segundos
+Taxa de Mudança: 0.50
+Taxa de Convergência: 25.00%
+================================================================================
+
+Simulação 16
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.60):
+{0: 'z', 1: 'z', 2: 'z', 3: 'z', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:43:54
+
+Convergência atingida após 1 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:43:54
+Tempo Total de Simulação: 0.50 segundos
+Taxa de Mudança: 1.00
+Taxa de Convergência: 100.00%
+================================================================================
+
+Simulação 17
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'z', 1: 'k', 2: 'z', 3: 'k', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:43:54
+
+Convergência atingida após 6 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:43:58
+Tempo Total de Simulação: 3.19 segundos
+Taxa de Mudança: 0.33
+Taxa de Convergência: 16.67%
+================================================================================
+
+Simulação 18
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'z', 1: 'k', 2: 'k', 3: 'k', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:43:58
+
+Convergência atingida após 9 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:44:03
+Tempo Total de Simulação: 4.92 segundos
+Taxa de Mudança: 0.22
+Taxa de Convergência: 11.11%
+================================================================================
+
+Simulação 19
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'k', 1: 'k', 2: 'k', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:44:03
+
+Convergência atingida após 5 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:44:05
+Tempo Total de Simulação: 2.69 segundos
+Taxa de Mudança: 0.40
+Taxa de Convergência: 20.00%
+================================================================================
+
+Simulação 20
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.60):
+{0: 'k', 1: 'z', 2: 'z', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:44:05
+
+Convergência atingida após 3 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:44:07
+Tempo Total de Simulação: 1.60 segundos
+Taxa de Mudança: 0.33
+Taxa de Convergência: 33.33%
+================================================================================
+
+Simulação 21
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'z', 1: 'k', 2: 'z', 3: 'k', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:44:07
+
+Convergência atingida após 9 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:44:12
+Tempo Total de Simulação: 5.15 segundos
+Taxa de Mudança: 0.44
+Taxa de Convergência: 11.11%
+================================================================================
+
+Simulação 22
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.20):
+{0: 'k', 1: 'z', 2: 'k', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:44:12
+
+Convergência atingida após 6 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:44:15
+Tempo Total de Simulação: 2.84 segundos
+Taxa de Mudança: 0.50
+Taxa de Convergência: 16.67%
+================================================================================
+
+Simulação 23
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'z', 1: 'k', 2: 'k', 3: 'z', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:44:15
+
+Convergência atingida após 21 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:44:27
+Tempo Total de Simulação: 12.23 segundos
+Taxa de Mudança: 0.14
+Taxa de Convergência: 4.76%
+================================================================================
+
+Simulação 24
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'k', 1: 'k', 2: 'k', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:44:27
+
+Convergência atingida após 11 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:44:32
+Tempo Total de Simulação: 5.40 segundos
+Taxa de Mudança: 0.18
+Taxa de Convergência: 9.09%
+================================================================================
+
+Simulação 25
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.20):
+{0: 'k', 1: 'z', 2: 'z', 3: 'z', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:44:32
+
+Convergência atingida após 10 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:44:38
+Tempo Total de Simulação: 5.23 segundos
+Taxa de Mudança: 0.30
+Taxa de Convergência: 10.00%
+================================================================================
+
+Simulação 26
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.20):
+{0: 'k', 1: 'z', 2: 'z', 3: 'z', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:44:38
+
+Convergência atingida após 7 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:44:42
+Tempo Total de Simulação: 4.20 segundos
+Taxa de Mudança: 0.29
+Taxa de Convergência: 14.29%
+================================================================================
+
+Simulação 27
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.20):
+{0: 'z', 1: 'k', 2: 'z', 3: 'k', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:44:42
+
+Convergência atingida após 4 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:44:44
+Tempo Total de Simulação: 1.91 segundos
+Taxa de Mudança: 0.50
+Taxa de Convergência: 25.00%
+================================================================================
+
+Simulação 28
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.60):
+{0: 'k', 1: 'z', 2: 'k', 3: 'k', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:44:44
+
+Convergência atingida após 1 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:44:44
+Tempo Total de Simulação: 0.48 segundos
+Taxa de Mudança: 1.00
+Taxa de Convergência: 100.00%
+================================================================================
+
+Simulação 29
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'k', 1: 'k', 2: 'z', 3: 'z', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:44:44
+
+Convergência atingida após 7 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:44:48
+Tempo Total de Simulação: 3.33 segundos
+Taxa de Mudança: 0.29
+Taxa de Convergência: 14.29%
+================================================================================
+
+Simulação 30
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.60):
+{0: 'z', 1: 'z', 2: 'z', 3: 'k', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:44:48
+
+Convergência atingida após 5 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:44:50
+Tempo Total de Simulação: 2.64 segundos
+Taxa de Mudança: 0.20
+Taxa de Convergência: 20.00%
+================================================================================
+
+Simulação 31
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'z', 1: 'k', 2: 'k', 3: 'z', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:44:50
+
+Convergência atingida após 3 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:44:52
+Tempo Total de Simulação: 1.67 segundos
+Taxa de Mudança: 0.67
+Taxa de Convergência: 33.33%
+================================================================================
+
+Simulação 32
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.20):
+{0: 'k', 1: 'z', 2: 'k', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:44:52
+
+Convergência atingida após 3 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:44:54
+Tempo Total de Simulação: 1.71 segundos
+Taxa de Mudança: 0.67
+Taxa de Convergência: 33.33%
+================================================================================
+
+Simulação 33
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.60):
+{0: 'z', 1: 'k', 2: 'k', 3: 'k', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:44:54
+
+Convergência atingida após 13 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:45:00
+Tempo Total de Simulação: 6.61 segundos
+Taxa de Mudança: 0.08
+Taxa de Convergência: 7.69%
+================================================================================
+
+Simulação 34
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.20):
+{0: 'z', 1: 'z', 2: 'k', 3: 'k', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:45:00
+
+Convergência atingida após 4 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:45:02
+Tempo Total de Simulação: 1.93 segundos
+Taxa de Mudança: 0.50
+Taxa de Convergência: 25.00%
+================================================================================
+
+Simulação 35
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.60):
+{0: 'z', 1: 'k', 2: 'z', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:45:02
+
+Convergência atingida após 4 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:45:04
+Tempo Total de Simulação: 2.09 segundos
+Taxa de Mudança: 0.25
+Taxa de Convergência: 25.00%
+================================================================================
+
+Simulação 36
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=1.00):
+{0: 'k', 1: 'k', 2: 'k', 3: 'k', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:45:04
+
+Convergência atingida após 1 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:45:05
+Tempo Total de Simulação: 0.36 segundos
+Taxa de Mudança: 0.00
+Taxa de Convergência: 100.00%
+================================================================================
+
+Simulação 37
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.60):
+{0: 'z', 1: 'k', 2: 'z', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:45:05
+
+Convergência atingida após 2 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:45:06
+Tempo Total de Simulação: 0.96 segundos
+Taxa de Mudança: 0.50
+Taxa de Convergência: 50.00%
+================================================================================
+
+Simulação 38
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'k', 1: 'k', 2: 'z', 3: 'z', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:45:06
+
+Convergência atingida após 2 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:45:07
+Tempo Total de Simulação: 1.00 segundos
+Taxa de Mudança: 1.00
+Taxa de Convergência: 50.00%
+================================================================================
+
+Simulação 39
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'z', 1: 'k', 2: 'z', 3: 'k', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:45:07
+
+Convergência atingida após 8 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:45:11
+Tempo Total de Simulação: 4.22 segundos
+Taxa de Mudança: 0.25
+Taxa de Convergência: 12.50%
+================================================================================
+
+Simulação 40
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-1.00):
+{0: 'z', 1: 'z', 2: 'z', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:45:11
+
+Convergência atingida após 1 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:45:11
+Tempo Total de Simulação: 0.43 segundos
+Taxa de Mudança: 0.00
+Taxa de Convergência: 100.00%
+================================================================================
+
+Simulação 41
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.20):
+{0: 'k', 1: 'k', 2: 'z', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:45:11
+
+Convergência atingida após 2 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:45:12
+Tempo Total de Simulação: 0.76 segundos
+Taxa de Mudança: 1.00
+Taxa de Convergência: 50.00%
+================================================================================
+
+Simulação 42
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=1.00):
+{0: 'k', 1: 'k', 2: 'k', 3: 'k', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:45:12
+
+Convergência atingida após 1 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:45:12
+Tempo Total de Simulação: 0.42 segundos
+Taxa de Mudança: 0.00
+Taxa de Convergência: 100.00%
+================================================================================
+
+Simulação 43
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'k', 1: 'k', 2: 'k', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:45:12
+
+Convergência atingida após 2 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:45:14
+Tempo Total de Simulação: 1.18 segundos
+Taxa de Mudança: 1.00
+Taxa de Convergência: 50.00%
+================================================================================
+
+Simulação 44
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'k', 1: 'z', 2: 'k', 3: 'k', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:45:14
+
+Convergência atingida após 2 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:45:15
+Tempo Total de Simulação: 0.97 segundos
+Taxa de Mudança: 1.00
+Taxa de Convergência: 50.00%
+================================================================================
+
+Simulação 45
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.20):
+{0: 'k', 1: 'z', 2: 'z', 3: 'z', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:45:15
+
+Convergência atingida após 6 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:45:17
+Tempo Total de Simulação: 2.79 segundos
+Taxa de Mudança: 0.33
+Taxa de Convergência: 16.67%
+================================================================================
+
+Simulação 46
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.60):
+{0: 'z', 1: 'z', 2: 'k', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:45:17
+
+Convergência atingida após 4 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:45:20
+Tempo Total de Simulação: 2.19 segundos
+Taxa de Mudança: 0.25
+Taxa de Convergência: 25.00%
+================================================================================
+
+Simulação 47
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.20):
+{0: 'k', 1: 'z', 2: 'k', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:45:20
+
+Convergência atingida após 5 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:45:22
+Tempo Total de Simulação: 2.37 segundos
+Taxa de Mudança: 0.40
+Taxa de Convergência: 20.00%
+================================================================================
+
+Simulação 48
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'z', 1: 'k', 2: 'z', 3: 'k', 4: 'k'}
+------------------------------
+
+Tempo de início: 14:45:22
+
+Convergência atingida após 2 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:45:23
+Tempo Total de Simulação: 0.96 segundos
+Taxa de Mudança: 1.00
+Taxa de Convergência: 50.00%
+================================================================================
+
+Simulação 49
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=-0.60):
+{0: 'z', 1: 'z', 2: 'k', 3: 'z', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:45:23
+
+Convergência atingida após 1 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 5})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z']
+Tempo de término: 14:45:24
+Tempo Total de Simulação: 0.57 segundos
+Taxa de Mudança: 1.00
+Taxa de Convergência: 100.00%
+================================================================================
+
+Simulação 50
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 5
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.60):
+{0: 'k', 1: 'k', 2: 'k', 3: 'k', 4: 'z'}
+------------------------------
+
+Tempo de início: 14:45:24
+
+Convergência atingida após 7 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 5})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k']
+Tempo de término: 14:45:27
+Tempo Total de Simulação: 3.09 segundos
+Taxa de Mudança: 0.14
+Taxa de Convergência: 14.29%
+================================================================================
+
+
+==================================================
+RESULTADOS DE P(m)
+==================================================
+m = -1.00, P(m) = 0.0000
+m = -0.60, P(m) = 0.0000
+m = -0.20, P(m) = 0.3333
+m = 0.20, P(m) = 0.9444
+m = 0.60, P(m) = 1.0000
+m = 1.00, P(m) = 1.0000
+
+==================================================
+ANÁLISE CONCLUÍDA
+Tempo total de execução: 398.29 segundos
+Tempo médio por simulação: 7.97 segundos
+==================================================

@@ -1,0 +1,80 @@
+================================================================================
+EXPERIMENTO ÚNICO DE CONFORMIDADE SOCIAL
+================================================================================
+
+1. CONFIGURAÇÃO DO EXPERIMENTO:
+{
+    "model": "gpt-3.5-turbo",
+    "temperature": 0.2,
+    "max_tokens": 5,
+    "opinions_initial": {
+        "1": "k",
+        "-1": "z"
+    },
+    "opinion_values": {
+        "k": 1,
+        "z": -1
+    },
+    "agent_id": 0,
+    "other_agents_opinions": {
+        "1": 1,
+        "2": -1,
+        "3": 1
+    }
+}
+
+Nomes das opiniões foram trocados: +1=z, -1=k
+Estado inicial (m=0.33):
+Opiniões: z (+1), k (-1)
+Distribuição inicial: Counter({'z': 2, 'k': 1})
+
+2. PROMPTS UTILIZADOS:
+System Prompt:
+Você é um agente em um grupo.
+
+User Prompt:
+Below you can see the list of all your friends together with the opinion they support.
+You must reply with the opinion you want to support: either 'z' or 'k'.
+The opinion must be reported between square brackets.
+
+YYs z
+VE4 k
+JU4 z
+
+Reply only with your chosen opinion ('z' or 'k') between square brackets, like [z] or [k].
+
+3. CHAMADA À API:
+
+4. RESPOSTA DA API:
+{
+    "completion_id": "chatcmpl-BI55eiguAH8YgVuraJ2VXSWIAWevG",
+    "model": "gpt-3.5-turbo-0125",
+    "created_timestamp": "2025-04-02 23:59:30",
+    "response_ms": 397,
+    "choices": [
+        {
+            "text": "[z]",
+            "finish_reason": "stop",
+            "index": 0
+        }
+    ],
+    "usage": {
+        "completion_tokens": 3,
+        "prompt_tokens": 103,
+        "total_tokens": 106
+    }
+}
+
+5. ANÁLISE DA RESPOSTA:
+Resposta bruta: [z]
+Opinião extraída: z (valor: 1)
+
+6. ANÁLISE DE CONFORMIDADE:
+Opinião majoritária: z (positiva)
+Conformidade com a maioria: True
+Explicação: O agente escolheu concordar com a opinião majoritária
+
+7. RESULTADO FINAL:
+Opinião coletiva final (m): 0.50
+Tempo total de processamento: 0.40 segundos
+================================================================================

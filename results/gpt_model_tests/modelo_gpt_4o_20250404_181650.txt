@@ -1,0 +1,24 @@
+Simulação 1, Taxa de Convergência: 0.03571428571428571
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 10
+Modelo: gpt-4o
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.00):
+{0: 'k', 1: 'z', 2: 'z', 3: 'z', 4: 'k', 5: 'k', 6: 'z', 7: 'k', 8: 'k', 9: 'z'}
+------------------------------
+
+Tempo de início: 18:16:50
+
+Convergência atingida após 28 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 10})
+Opinião Coletiva Final (m): 1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z']
+Tempo de término: 18:17:05
+Tempo Total de Simulação: 14.84 segundos
+Taxa de Mudança: 0.25
+Taxa de Convergência: 3.57%
+================================================================================

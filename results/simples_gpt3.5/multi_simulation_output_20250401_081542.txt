@@ -1,0 +1,98 @@
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 10
+Modelo: gpt-3.5-turbo
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.00):
+{0: 'k', 1: 'z', 2: 'z', 3: 'k', 4: 'z', 5: 'z', 6: 'k', 7: 'k', 8: 'k', 9: 'z'}
+------------------------------
+
+Etapa 0: Agente 7 mudou de k para z
+Etapa 2: Agente 0 mudou de k para z
+Etapa 4: Agente 8 mudou de k para z
+Etapa 6: Agente 3 mudou de k para z
+Etapa 8: Agente 6 mudou de k para z
+
+CONVERGÊNCIA ATINGIDA na etapa 9!
+Opinião dominante: z
+
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 10})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z']
+Tempo Total de Simulação: 12.58 segundos
+Taxa de Mudança: 0.50
+Taxa de Convergência: 10.00%
+================================================================================
+
+
+Iniciando simulação com temperatura 0.5
+Número de agentes: 10
+Modelo: gpt-3.5-turbo
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.00):
+{0: 'k', 1: 'z', 2: 'z', 3: 'z', 4: 'k', 5: 'k', 6: 'z', 7: 'k', 8: 'z', 9: 'k'}
+------------------------------
+
+Etapa 1: Agente 9 mudou de k para z
+Etapa 2: Agente 7 mudou de k para z
+Etapa 9: Agente 0 mudou de k para z
+
+--- Época 1 (Etapa 10) ---
+   Opiniões: Counter({'z': 8, 'k': 2})
+   Opinião Coletiva (m): -0.60
+   Estado: ['z', 'z', 'z', 'z', 'k', 'k', 'z', 'z', 'z', 'z']
+
+Etapa 13: Agente 4 mudou de k para z
+Etapa 18: Agente 5 mudou de k para z
+
+CONVERGÊNCIA ATINGIDA na etapa 19!
+Opinião dominante: z
+
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 10})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z']
+Tempo Total de Simulação: 20.77 segundos
+Taxa de Mudança: 0.25
+Taxa de Convergência: 5.00%
+================================================================================
+
+
+Iniciando simulação com temperatura 0.8
+Número de agentes: 10
+Modelo: gpt-3.5-turbo
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.00):
+{0: 'k', 1: 'z', 2: 'k', 3: 'z', 4: 'k', 5: 'z', 6: 'k', 7: 'z', 8: 'z', 9: 'k'}
+------------------------------
+
+Etapa 0: Agente 4 mudou de k para z
+Etapa 3: Agente 2 mudou de k para z
+Etapa 9: Agente 0 mudou de k para z
+
+--- Época 1 (Etapa 10) ---
+   Opiniões: Counter({'z': 8, 'k': 2})
+   Opinião Coletiva (m): -0.60
+   Estado: ['z', 'z', 'z', 'z', 'z', 'z', 'k', 'z', 'z', 'k']
+
+Etapa 16: Agente 6 mudou de k para z
+Etapa 17: Agente 9 mudou de k para z
+
+CONVERGÊNCIA ATINGIDA na etapa 18!
+Opinião dominante: z
+
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'z': 10})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z', 'z']
+Tempo Total de Simulação: 24.15 segundos
+Taxa de Mudança: 0.26
+Taxa de Convergência: 5.26%
+================================================================================

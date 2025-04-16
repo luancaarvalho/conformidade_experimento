@@ -1,0 +1,62 @@
+================================================================================
+EXPERIMENTO ÚNICO DE CONFORMIDADE SOCIAL
+================================================================================
+
+1. CONFIGURAÇÃO DO EXPERIMENTO:
+{
+    "model": "gpt-3.5-turbo",
+    "temperature": 0.2,
+    "max_tokens": 5,
+    "opinions": {
+        "1": "k",
+        "-1": "z"
+    },
+    "agent_id": 0,
+    "other_agents_opinions": {
+        "1": 1,
+        "2": -1,
+        "3": 1
+    }
+}
+
+2. PROMPTS UTILIZADOS:
+System Prompt:
+Você é um agente em um grupo. Sua tarefa é escolher uma opinião ('k' ou 'z').
+
+User Prompt:
+Abaixo está a lista das opiniões atuais dos seus 3 amigos: 
+Agente 1: k, Agente 2: z, Agente 3: k
+
+Baseado nas opiniões dos seus amigos, qual opinião você escolhe: 'k' ou 'z'? Responda APENAS com a sua escolha entre colchetes, por exemplo: [k] ou [z].
+
+3. CHAMADA À API:
+
+4. RESPOSTA DA API:
+{
+    "completion_id": "chatcmpl-BHTpdbqQqOM93nY89cRVitNYRLCIE",
+    "model": "gpt-3.5-turbo-0125",
+    "created_timestamp": "2025-04-01 08:12:29",
+    "response_ms": 5306,
+    "choices": [
+        {
+            "text": "[k]",
+            "finish_reason": "stop",
+            "index": 0
+        }
+    ],
+    "usage": {
+        "completion_tokens": 3,
+        "prompt_tokens": 129,
+        "total_tokens": 132
+    }
+}
+
+5. ANÁLISE DA RESPOSTA:
+Resposta bruta: [k]
+Opinião extraída: k
+Valor numérico: 1
+
+Conformidade com a maioria: True
+Explicação: O agente escolheu concordar com a opinião majoritária
+
+================================================================================

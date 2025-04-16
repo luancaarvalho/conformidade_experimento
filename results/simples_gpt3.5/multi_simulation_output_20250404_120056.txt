@@ -1,0 +1,23 @@
+Simulação 1, Taxa de Convergência: 0.012345679012345678
+
+Iniciando simulação com temperatura 0.2
+Número de agentes: 10
+Modelo: gpt-3.5-turbo
+Opiniões: k (+1), z (-1)
+
+Estado inicial (m=0.20):
+{0: 'k', 1: 'k', 2: 'k', 3: 'k', 4: 'k', 5: 'z', 6: 'k', 7: 'z', 8: 'z', 9: 'z'}
+------------------------------
+
+Tempo de início: 12:00:56
+
+Convergência atingida após 81 etapas!
+------------------------------
+--- Resultado Final ---
+Opiniões Finais: Counter({'k': 10})
+Opinião Coletiva Final (m): -1.00
+Estado Final: ['k', 'k', 'k', 'k', 'k', 'k', 'k', 'k', 'k', 'k']
+Tempo de término: 12:01:41
+Tempo Total de Simulação: 45.23 segundos
+Taxa de Mudança: 0.42
+================================================================================
