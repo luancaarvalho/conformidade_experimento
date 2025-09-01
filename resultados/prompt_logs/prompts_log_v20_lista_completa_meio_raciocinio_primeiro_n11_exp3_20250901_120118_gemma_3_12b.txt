@@ -1,0 +1,6 @@
+=== LOG DE PROMPTS DO EXPERIMENTO DE VIZINHANÇA - 20250901_120118 ===
+Experimento ID: 3
+Modelo: gemma-3-12b
+Número de vizinhos: 11
+Data e hora: 2025-09-01 12:01:18
+

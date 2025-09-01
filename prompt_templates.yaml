@@ -1,0 +1,419 @@
+# Arquivo de configuração de prompts para experimento de conformidade
+# Cada chave representa uma variante de prompt diferente
+
+v5_original:
+  system: |
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with the opinion you want to support.
+
+    IMPORTANT: Your response must contain ONLY the chosen opinion in square brackets - either [k] or [z].
+
+    You MUST choose either [k] or [z]. Your response must be ONLY [k] or [z] - nothing else.
+
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    Below you can see the opinions of your neighbors. Each neighbor is placed in a position around you.
+
+    {neighbors_section}
+
+    Your current opinion: [{current_opinion}]
+
+    The neighbors are arranged in a circular layout:
+    - 'left': neighbors in counter-clockwise direction (more distant → closer)
+    - 'right': neighbors in clockwise direction (closer → more distant)
+
+    Here are the principles to follow when making your choice:
+    1. You must choose an opinion to support: either 'k' or 'z'
+    2. You should consider the opinions of your neighbors when making your choice
+    3. You can either keep your current opinion or change it based on your neighbors
+
+    In all cases, respond ONLY with the chosen opinion in square brackets, for example: [k] or [z]
+
+    Reply only with the opinion you want to support, between square brackets [opinion].
+
+
+v6_lista_indices:
+  system: |
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with the opinion you want to support.
+
+    IMPORTANT: Your response must contain ONLY the chosen opinion in square brackets - either [k] or [z].
+
+    You MUST choose either [k] or [z]. Your response must be ONLY [k] or [z] - nothing else.
+
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    Below you can see a list of opinions from all participants in your group. Your own position and current opinion are also indicated.
+
+    {neighborhood_list_section}
+
+    Based on the full list of opinions and your own position, you must choose an opinion to support.
+
+    Principles to follow:
+    1. You must choose an opinion to support: either 'k' or 'z'.
+    2. You should consider the opinions of the entire group when making your choice.
+
+    Reply ONLY with the chosen opinion in square brackets, for example: [k] or [z].
+
+v7_offsets:
+  system: |
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with the opinion you want to support.
+
+    IMPORTANT: Your response must contain ONLY the chosen opinion in square brackets - either [k] or [z].
+
+    You MUST choose either [k] or [z]. Your response must be ONLY [k] or [z] - nothing else.
+
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    Below is a map of opinions relative to your own position, indicated by offsets.
+    - 'offset: 0' indicates your own position and opinion.
+    - 'offset: -1' is the neighbor to your left.
+    - 'offset: +1' is the neighbor to your right.
+
+    {relative_map_section}
+
+    Considering the opinions of your neighbors relative to you, make a choice.
+
+    Principles to follow:
+    1. You must choose an opinion to support: either 'k' or 'z'.
+    2. You should consider the opinions of your neighbors when making your choice.
+
+    Reply ONLY with the chosen opinion in square brackets, for example: [k] or [z].
+
+v8_visual:
+  system: |
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with the opinion you want to support.
+
+    IMPORTANT: Your response must contain ONLY the chosen opinion in square brackets - either [k] or [z].
+
+    You MUST choose either [k] or [z]. Your response must be ONLY [k] or [z] - nothing else.
+
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    Below is a simple visual map of your group's opinions. Your position is marked by `()`.
+
+    {visual_map_section}
+
+    For example, the map `z - k ->(k)<- z` means your current opinion is 'k', and you are surrounded by neighbors with opinions 'k', 'z', and 'z'.
+
+    Based on this visual map, make a choice.
+
+    Principles to follow:
+    1. You must choose an opinion to support: either 'k' or 'z'.
+    2. You should consider the opinions of your neighbors when making your choice.
+
+    Reply ONLY with the chosen opinion in square brackets, for example: [k] or [z].
+
+v9_lista_completa_meio:
+  system: |
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with the opinion you want to support.
+
+    IMPORTANT: Your response must contain ONLY the chosen opinion in square brackets - either [k] or [z].
+
+    You MUST choose either [k] or [z]. Your response must be ONLY [k] or [z] - nothing else.
+
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    Below you can see the complete list of opinions from all participants in your group, including your own.
+
+    {neighbors_section}
+
+    Here are the principles to follow when making your choice:
+    1. You must choose an opinion to support: either 'k' or 'z'
+    2. You should consider the opinions of all participants when making your choice
+    3. You can either keep your current opinion or change it based on the group
+
+    In all cases, respond ONLY with the chosen opinion in square brackets, for example: [k] or [z]
+
+    Reply only with the opinion you want to support, between square brackets [opinion].
+
+v10_lista_indice_especifico:
+  system: |
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with the opinion you want to support.
+
+    IMPORTANT: Your response must contain ONLY the chosen opinion in square brackets - either [k] or [z].
+
+    You MUST choose either [k] or [z]. Your response must be ONLY [k] or [z] - nothing else.
+
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    Below you can see the complete list of opinions from all participants in your group, along with your specific position.
+
+    {neighbors_section}
+
+    The list shows all participants' opinions with specific index positions. You can identify your own position and opinion using the provided index.
+
+    Here are the principles to follow when making your choice:
+    1. You must choose an opinion to support: either 'k' or 'z'
+    2. You should consider the opinions of all participants when making your choice
+    3. You can either keep your current opinion or change it based on the group
+
+    In all cases, respond ONLY with the chosen opinion in square brackets, for example: [k] or [z]
+
+    Reply only with the opinion you want to support, between square brackets [opinion].
+
+v11_lista_completa_meio_sem_current:
+  system: |
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with the opinion you want to support.
+
+    IMPORTANT: Your response must contain ONLY the chosen opinion in square brackets - either [k] or [z].
+
+    You MUST choose either [k] or [z]. Your response must be ONLY [k] or [z] - nothing else.
+
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    Below you can see the complete list of opinions from all participants in your group.
+
+    {neighbors_section}
+
+    Here are the principles to follow when making your choice:
+    1. You must choose an opinion to support: either 'k' or 'z'
+    2. You should consider the opinions of all participants when making your choice
+    3. You can change your opinion based on the group
+
+    In all cases, respond ONLY with the chosen opinion in square brackets, for example: [k] or [z]
+
+    Reply only with the opinion you want to support, between square brackets [opinion].
+
+v12_python:
+  system: |
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with the opinion you want to support.
+
+    IMPORTANT: Your response must contain ONLY the chosen opinion in square brackets - either [k] or [z].
+
+    You MUST choose either [k] or [z]. Your response must be ONLY [k] or [z] - nothing else.
+
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    Below is a Python-like representation of the complete neighborhood and your position within it:
+    
+    {code_section}
+    
+    You can see the full neighborhood list and your exact position (index) within it. 
+    You can either keep your current opinion or change it based on the neighborhood.
+    
+    Count the neighbors' opinions (excluding your own) and decide what opinion to support.
+    
+    Finally, respond ONLY with the chosen opinion in square brackets, for example: [k] or [z].
+
+v13_incidence:
+  system: |
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with the opinion you want to support.
+
+    IMPORTANT: Your response must contain ONLY the chosen opinion in square brackets - either [k] or [z].
+
+    You MUST choose either [k] or [z]. Your response must be ONLY [k] or [z] - nothing else.
+
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    Below is the list of neighbors relative to your position, given as (offset, opinion):
+
+    {relative_map_section}
+
+    Negative offsets indicate neighbors to your left; positive offsets indicate neighbors to your right. Larger absolute values are further away.
+
+    Based on these offsets and opinions, respond ONLY with your chosen opinion in square brackets, for example: [k] or [z].
+
+v14_json:
+  system: |
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with the opinion you want to support.
+
+    IMPORTANT: Your response must contain ONLY the chosen opinion in square brackets - either [k] or [z].
+
+    You MUST choose either [k] or [z]. Your response must be ONLY [k] or [z] - nothing else.
+
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    Below is the map of your neighbors' opinions encoded as a JSON object.
+
+    {neighbors_section}
+
+    Keys indicate relative position (negative = left, positive = right). Values are opinions.
+
+    Based on this structure, respond ONLY with the chosen opinion in square brackets, for example: [k] or [z].
+
+v15_compact_symbol:
+  system: |
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with the opinion you want to support.
+
+    IMPORTANT: Your response must contain ONLY the chosen opinion in square brackets - either [k] or [z].
+
+    You MUST choose either [k] or [z]. Your response must be ONLY [k] or [z] - nothing else.
+
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    Here is a compact symbol representing your neighborhood. The segment before "|" shows neighbors to your left, the segment after shows neighbors to your right, and YOU is in the middle.
+
+    {visual_map_section}
+
+    Using this compact representation, decide whether to support k or z. Reply ONLY with [k] or [z].
+
+v16_cartesian:
+  system: |
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with the opinion you want to support.
+
+    IMPORTANT: Your response must contain ONLY the chosen opinion in square brackets - either [k] or [z].
+
+    You MUST choose either [k] or [z]. Your response must be ONLY [k] or [z] - nothing else.
+
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    Below is a coordinate representation of your neighbors' opinions.
+
+    {relative_map_section}
+
+    Offsets are integers: negative values are neighbors to your left; positive values are neighbors to your right. Larger absolute values are further away.
+
+    Based on these positions and opinions, choose your opinion and reply ONLY with [k] or [z].
+
+v17_graph_of_thought:
+  system: |
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with the opinion you want to support.
+
+    IMPORTANT: Your response must contain ONLY the chosen opinion in square brackets - either [k] or [z].
+
+    You MUST choose either [k] or [z]. Your response must be ONLY [k] or [z] - nothing else.
+
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    Here are your neighbors' opinions:
+
+    {neighbors_section}
+
+    To help you think, consider both possible choices and their consequences.
+
+    After evaluating both possibilities, respond ONLY with the choice you think is most appropriate (either [k] or [z]).
+
+v18_rule:
+  system: |
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with the opinion you want to support.
+
+    IMPORTANT: Your response must contain ONLY the chosen opinion in square brackets - either [k] or [z].
+
+    You MUST choose either [k] or [z]. Your response must be ONLY [k] or [z] - nothing else.
+
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    Below are the opinions of your neighbors:
+
+    {neighbors_section}
+
+    Apply this rule and respond ONLY with the chosen opinion in square brackets, for example: [k] or [z].
+
+left_right:
+  system: |
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with the opinion you want to support.
+
+    IMPORTANT: Your response must contain ONLY the chosen opinion in square brackets - either [k] or [z].
+
+    You MUST choose either [k] or [z]. Your response must be ONLY [k] or [z] - nothing else.
+
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    Below you can see the opinions of your neighbors. Each neighbor is placed in a position around you.
+
+    {neighbors_section}
+
+    Your current opinion: [{current_opinion}]
+
+    The neighbors are arranged in a circular layout:
+    - 'left': neighbors in counter-clockwise direction (more distant → closer)
+    - 'right': neighbors in clockwise direction (closer → more distant)
+
+    Here are the principles to follow when making your choice:
+    1. You must choose an opinion to support: either 'k' or 'z'
+    2. You should consider the opinions of your neighbors when making your choice
+    3. You can either keep your current opinion or change it based on your neighbors
+
+    In all cases, respond ONLY with the chosen opinion in square brackets, for example: [k] or [z]
+
+    Reply only with the opinion you want to support, between square brackets [opinion].
+
+v19_lista_completa_meio_com_raciocinio:
+  system: |
+    <start_of_turn>user
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with the opinion you want to support.
+
+    IMPORTANT: Your response must contain ONLY the chosen opinion in square brackets - either [k] or [z].
+
+    You MUST choose either [k] or [z]. Your response must be ONLY [k] or [z] - nothing else.
+
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    
+    Below you can see the complete list of opinions from all participants in your group, including your own.
+
+    {neighbors_section}
+
+    Here are the principles to follow when making your choice:
+    1. You must choose an opinion to support: either 'k' or 'z'
+    2. You should consider the opinions of all participants when making your choice
+    3. You can either keep your current opinion or change it based on the group
+
+    In all cases, respond ONLY with the chosen opinion in square brackets, for example: [k] or [z]
+
+    Reply only with the opinion you want to support, between square brackets [opinion].
+
+    After outputting your choice above, provide your reasoning: Why did you choose this opinion? Consider group dynamics and your decision-making process.
+    <end_of_turn>
+    <start_of_turn>model
+
+v20_lista_completa_meio_raciocinio_primeiro:
+  system: |
+    <start_of_turn>user
+    You will participate in an opinion choice activity.
+
+    After receiving the opinions of your friends, you must respond with your reasoning and then your choice.
+
+    IMPORTANT: Your response format must be:
+    1. First, provide your reasoning: Explain why you would choose a particular opinion, considering group dynamics and decision-making process.
+    2. Then, conclude with ONLY your chosen opinion in square brackets - either [k] or [z].
+
+    You MUST end your response with either [k] or [z] in square brackets.
+    
+    Do not include any additional text, explanation, or formatting beyond the brackets and the letter.
+  user: |
+    Below you can see the complete list of opinions from all participants in your group, including your own.
+
+    {neighbors_section}
+
+    Here are the principles to follow when making your choice:
+    1. You must choose an opinion to support: either 'k' or 'z'
+    2. You should consider the opinions of all participants when making your choice
+    3. You can either keep your current opinion or change it based on the group
+
+    Please first explain your reasoning process: Why would you choose a particular opinion? Consider the group dynamics and your decision-making process.
+
+    After your reasoning, conclude with your final choice in square brackets, for example: [k] or [z]
+    <end_of_turn>
+    <start_of_turn>model

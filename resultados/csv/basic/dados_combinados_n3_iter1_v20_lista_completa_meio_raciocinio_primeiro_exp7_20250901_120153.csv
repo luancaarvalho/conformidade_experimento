@@ -1,0 +1,9 @@
+variante,temperatura,configuracao_binaria,configuracao_letras,num_ones,escolha
+v20_lista_completa_meio_raciocinio_primeiro,0.0,000,kkk,0,0
+v20_lista_completa_meio_raciocinio_primeiro,0.0,001,kkz,1,0
+v20_lista_completa_meio_raciocinio_primeiro,0.0,010,kzk,1,0
+v20_lista_completa_meio_raciocinio_primeiro,0.0,011,kzz,2,1
+v20_lista_completa_meio_raciocinio_primeiro,0.0,100,zkk,1,0
+v20_lista_completa_meio_raciocinio_primeiro,0.0,101,zkz,2,1
+v20_lista_completa_meio_raciocinio_primeiro,0.0,110,zzk,2,1
+v20_lista_completa_meio_raciocinio_primeiro,0.0,111,zzz,3,1
