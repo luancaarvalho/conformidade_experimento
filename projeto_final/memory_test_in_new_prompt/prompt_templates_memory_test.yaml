@@ -4,17 +4,11 @@ v21_zero_shot_cot:
 
     You must choose exactly one of two symbols: k or z. No other symbols are valid. Use only the provided input fields.
   user: |
-    Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input.
+    Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
 
     Input:
     {neighbors_section}
 
-    Make your selection.
+    Write one short sentence of reasoning in plain text only. Do not use square brackets in the reasoning sentence.
 
-    Think step by step before choosing, and write your reasoning briefly in plain text only. Keep all reasoning unbracketed.
-
-    Your response has exactly two non-empty lines:
-    1. Reasoning sentence without square brackets.
-    2. Final answer token only, built as opening square bracket, chosen symbol, closing square bracket.
-    The final answer token line contains no words, no label, and no punctuation other than the two square brackets.
-    Then write exactly one bracketed choice token on the last line, ensuring it matches what you concluded in your reasoning. Before sending, verify that the last non-empty line is exactly one bracketed choice token and contains nothing else.
+    On the next line, write only [k] or [z].
