@@ -467,6 +467,9 @@ def get_prompt_strategy(variant_name: str, yaml_path: str = None) -> PromptStrat
         'v18_rule': V18RuleStrategy,
         'v19_lista_completa_meio_com_raciocinio': V19ListaCompletaMeioComRaciocinio,
         'v20_lista_completa_meio_raciocinio_primeiro': V20ListaCompletaMeioRaciocinioPrimeiro,
+        # Memory test branch: v21 uses the production current-round fields.
+        # The CoT behavior lives in the YAML output contract, not in formatting.
+        'v21_zero_shot_cot': V20ListaCompletaMeioRaciocinioPrimeiro,
     }
 
     if variant_name not in strategy_map:
