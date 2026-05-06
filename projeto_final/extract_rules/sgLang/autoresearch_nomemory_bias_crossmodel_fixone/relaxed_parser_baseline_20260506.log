@@ -1,0 +1,18 @@
+[startup] health/smoke checks
+[smoke] gemma4b ok
+[smoke] llama8b ok
+[smoke] qwen4b_no_think ok
+[eval] gemma4b baseline_crossmodel_20260506_133329 v9_lista_completa_meio_kz normal: parse=128/128 think_ok=128/128 index_counts={1: 69, 0: 59} token_counts={'z': 69, 'k': 59}
+[eval] gemma4b baseline_crossmodel_20260506_133329 v9_lista_completa_meio_kz swap: parse=128/128 think_ok=128/128 index_counts={0: 59, 1: 69} token_counts={'z': 59, 'k': 69}
+[eval] gemma4b baseline_crossmodel_20260506_133329 v21_zero_shot_cot normal: parse=128/128 think_ok=128/128 index_counts={0: 33, 1: 95} token_counts={'k': 33, 'z': 95}
+[eval] gemma4b baseline_crossmodel_20260506_133329 v21_zero_shot_cot swap: parse=128/128 think_ok=128/128 index_counts={0: 54, 1: 74} token_counts={'z': 54, 'k': 74}
+[eval] llama8b baseline_crossmodel_20260506_133329 v9_lista_completa_meio_kz normal: parse=128/128 think_ok=128/128 index_counts={0: 41, 1: 87} token_counts={'k': 41, 'z': 87}
+[eval] llama8b baseline_crossmodel_20260506_133329 v9_lista_completa_meio_kz swap: parse=128/128 think_ok=128/128 index_counts={0: 39, 1: 89} token_counts={'z': 39, 'k': 89}
+[eval] llama8b baseline_crossmodel_20260506_133329 v21_zero_shot_cot normal: parse=128/128 think_ok=128/128 index_counts={0: 105, 1: 23} token_counts={'k': 105, 'z': 23}
+[eval] llama8b baseline_crossmodel_20260506_133329 v21_zero_shot_cot swap: parse=128/128 think_ok=128/128 index_counts={0: 63, 1: 65} token_counts={'z': 63, 'k': 65}
+[eval] qwen4b_no_think baseline_crossmodel_20260506_133329 v9_lista_completa_meio_kz normal: parse=128/128 think_ok=128/128 index_counts={0: 65, 1: 63} token_counts={'k': 65, 'z': 63}
+[eval] qwen4b_no_think baseline_crossmodel_20260506_133329 v9_lista_completa_meio_kz swap: parse=128/128 think_ok=128/128 index_counts={0: 64, 1: 64} token_counts={'z': 64, 'k': 64}
+[eval] qwen4b_no_think baseline_crossmodel_20260506_133329 v21_zero_shot_cot normal: parse=128/128 think_ok=128/128 index_counts={0: 62, 1: 66} token_counts={'k': 62, 'z': 66}
+[eval] qwen4b_no_think baseline_crossmodel_20260506_133329 v21_zero_shot_cot swap: parse=128/128 think_ok=128/128 index_counts={0: 66, 1: 62} token_counts={'z': 66, 'k': 62}
+[baseline] baseline_crossmodel_20260506_133329: gemma4b: v9_lista_completa_meio_kz: normal_idx={1: 69, 0: 59}, swap_idx={0: 59, 1: 69}, aggregate_delta=0/128, parse=256/256, think_ok=256/256; v21_zero_shot_cot: normal_idx={0: 33, 1: 95}, swap_idx={0: 54, 1: 74}, aggregate_delta=21/128, parse=256/256, think_ok=256/256 | llama8b: v9_lista_completa_meio_kz: normal_idx={0: 41, 1: 87}, swap_idx={0: 39, 1: 89}, aggregate_delta=2/128, parse=256/256, think_ok=256/256; v21_zero_shot_cot: normal_idx={0: 105, 1: 23}, swap_idx={0: 63, 1: 65}, aggregate_delta=42/128, parse=256/256, think_ok=256/256 | qwen4b_no_think: v9_lista_completa_meio_kz: normal_idx={0: 65, 1: 63}, swap_idx={0: 64, 1: 64}, aggregate_delta=1/128, parse=256/256, think_ok=256/256; v21_zero_shot_cot: normal_idx={0: 62, 1: 66}, swap_idx={0: 66, 1: 62}, aggregate_delta=4/128, parse=256/256, think_ok=256/256; crossmodel_score=18.0000
+[keeper] baseline accepted path=/home/ncdia/luan/projeto_final/extract_rules/sgLang/autoresearch_nomemory_bias_crossmodel_fixone/KEEPER_PROMPT_NOMEMORY_BIAS_CROSSMODEL_FIXONE.md
