@@ -81,6 +81,14 @@ def parse_llm_response_token(
             if bracketed:
                 token = bracketed.group(1).strip().casefold()
                 return allowed.get(token)
+            # Qwen /no_think can produce a valid final choice as the last plain
+            # token of the reasoning sentence instead of a separate final line.
+            # Keep this v21-only and require the token to be the final standalone
+            # item, so ordinary mentions earlier in the reasoning do not parse.
+            escaped = sorted((re.escape(tok) for tok in allowed), key=len, reverse=True)
+            trailing = re.search(r"(?:^|\s)(" + "|".join(escaped) + r")\.?\s*$", final_line, flags=re.IGNORECASE)
+            if trailing:
+                return allowed.get(trailing.group(1).casefold())
 
     return parse_opinion_token(
         raw,
