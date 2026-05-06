@@ -91,3 +91,41 @@ Your Current Opinion: z
 Adding the timeline memory layer to the keeper prompt passes deterministic smoke testing but does not yet pass the full `run_batch` validation. The first full-run failure is a formatting completion issue triggered by a memory/current-round pattern where reasoning becomes longer and the final answer begins as `[k` without the closing bracket.
 
 Next step should be a focused prompt or stop-regex investigation for this single memory-induced incomplete-bracket family before expanding to all tokens or other models.
+
+## Verification-Line Retest
+
+Commit `46dbb4c` added only the verification line from the earlier successful
+memory prompt:
+
+```text
+Then write exactly one bracketed choice token on the last line, ensuring it matches what you concluded in your reasoning. Before sending, verify that the last non-empty line is exactly one bracketed choice token and contains nothing else.
+```
+
+Targeted retest:
+
+- Output:
+  `/home/ncdia/luan/projeto_final/streamlit_test/batch_outputs/rtx6000/memory_test_in_new_prompt_seed3_verify_20260506_144700`
+- Scope: `seed_distribution=3`, `memory_w=3 5`
+- Result: failed for both memory windows.
+
+New failure:
+
+```text
+round=1, agent=7, seed_distribution=3, memory_window=3/5
+```
+
+Raw response:
+
+```text
+The current opinion list is mostly 'k's, and I am in the middle, so I should choose 'k' to maintain the majority.
+
+[k
+[z
+```
+
+Interpretation:
+
+Adding only the old verification line did not fix the memory-layer parse issue.
+It shifted the failure earlier and made the output less stable: the model began
+an incomplete `[k` line and then emitted `[z`. This should not be accepted by
+parser relaxation because the final answer is internally inconsistent.
