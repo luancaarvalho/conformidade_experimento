@@ -315,6 +315,50 @@ Write one short sentence of reasoning in plain text only. First decide what the 
 
 On the next line, write only the chosen symbol inside square brackets.""",
         ),
+        (
+            system_kz,
+            """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
+
+Input:
+{neighbors_section}
+
+Write one short sentence of reasoning in plain text only. Base it on this specific input instance, not on the symbol names. Do not use square brackets in the reasoning sentence.
+
+On the next line, write only the chosen symbol inside square brackets. The final symbol must match the symbol supported by your reasoning sentence.""",
+        ),
+        (
+            system_kz,
+            """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
+
+Input:
+{neighbors_section}
+
+Write one short sentence of reasoning in plain text only. Base it on this specific input instance, not on the symbol names, and make the sentence identify the same symbol you will output. Do not use square brackets in the reasoning sentence.
+
+On the next line, write only the chosen symbol inside square brackets.""",
+        ),
+        (
+            system_no_order,
+            """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
+
+Input:
+{neighbors_section}
+
+Write one short sentence of reasoning in plain text only. Choose according to the concrete input instance, not according to the written order of symbol names. Do not use square brackets in the reasoning sentence.
+
+On the next line, write only the chosen symbol inside square brackets. Before sending, verify that the final symbol does not contradict the reasoning sentence.""",
+        ),
+        (
+            system_no_order,
+            """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
+
+Input:
+{neighbors_section}
+
+Write one short sentence of reasoning in plain text only. State the basis for one symbol, then use that same symbol in the final answer. Do not use square brackets in the reasoning sentence.
+
+On the next line, write only the chosen symbol inside square brackets.""",
+        ),
     ]
     return [{"system": system, "user": user} for system, user in variants]
 
