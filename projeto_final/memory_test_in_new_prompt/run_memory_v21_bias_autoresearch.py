@@ -35,10 +35,6 @@ BIAS_DIR = MEMORY_TEST_DIR / "autoresearch_memory_bias_reduction"
 HINT_PATH = BIAS_DIR / "INITIAL_HINT.md"
 DEFAULT_BATCH_ROOT = Path("/home/ncdia/luan/projeto_final/streamlit_test/batch_outputs/rtx6000")
 
-MINIMAX_URL = os.getenv("MINIMAX_BASE_URL", "http://172.18.254.18:1234/v1/chat/completions")
-MINIMAX_MODEL = os.getenv("MINIMAX_MODEL", "minimax-m2.7@8bit")
-
-
 @dataclass(frozen=True)
 class ModelEndpoint:
     tag: str
@@ -185,26 +181,22 @@ def validate_prompt(system: str, user: str) -> list[str]:
     return errors
 
 
-def call_minimax(system_prompt: str, user_prompt: str, *, timeout_s: int = 180) -> str:
-    payload = {
-        "model": MINIMAX_MODEL,
-        "messages": [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt},
-        ],
-        "temperature": 0.35,
-        "max_tokens": 2600,
-    }
-    response = requests.post(MINIMAX_URL, json=payload, timeout=timeout_s)
-    response.raise_for_status()
-    return response.json()["choices"][0]["message"]["content"]
-
-
 def seeded_candidates(start: dict[str, str]) -> list[dict[str, str]]:
-    system = start["system"]
+    system_kz = start["system"]
+    system_zk = """You will participate in an opinion choice activity.
+
+You must choose exactly one of two symbols: z or k. No other symbols are valid. Use only the provided input fields."""
+    system_no_order = """You will participate in an opinion choice activity.
+
+You must choose exactly one of the two valid symbols named in this task. No other symbols are valid. Use only the provided input fields. The valid symbols are z and k."""
     variants = [
-        start["user"],
-        """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
+        (
+            system_kz,
+            start["user"],
+        ),
+        (
+            system_kz,
+            """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
 
 Input:
 {neighbors_section}
@@ -212,7 +204,10 @@ Input:
 Write one short sentence of reasoning in plain text only. Base it on this specific input instance, not on the symbol names. Do not use square brackets in the reasoning sentence.
 
 On the next line, write only the chosen symbol inside square brackets.""",
-        """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
+        ),
+        (
+            system_kz,
+            """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
 
 Input:
 {neighbors_section}
@@ -220,7 +215,10 @@ Input:
 Write one short sentence of reasoning in plain text only. Both symbols are valid labels; choose the one that your reasoning supports for this instance. Do not use square brackets in the reasoning sentence.
 
 On the next line, write only the chosen symbol inside square brackets.""",
-        """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
+        ),
+        (
+            system_kz,
+            """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
 
 Input:
 {neighbors_section}
@@ -228,8 +226,97 @@ Input:
 Think step by step briefly, then write one short reasoning sentence in plain text only. Do not use square brackets in the reasoning sentence.
 
 On the next line, write only the chosen symbol inside square brackets.""",
+        ),
+        (
+            system_zk,
+            """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
+
+Input:
+{neighbors_section}
+
+Write one short sentence of reasoning in plain text only. Base it on this specific input instance, not on the symbol names. Do not use square brackets in the reasoning sentence.
+
+On the next line, write only the chosen symbol inside square brackets.""",
+        ),
+        (
+            system_zk,
+            """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
+
+Input:
+{neighbors_section}
+
+Write one short sentence of reasoning in plain text only. Treat the two symbols symmetrically as labels. Do not use square brackets in the reasoning sentence.
+
+On the next line, write only the chosen symbol inside square brackets.""",
+        ),
+        (
+            system_no_order,
+            """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
+
+Input:
+{neighbors_section}
+
+Write one short sentence of reasoning in plain text only. Choose according to the concrete input instance, not according to the written order of symbol names. Do not use square brackets in the reasoning sentence.
+
+On the next line, write only the chosen symbol inside square brackets.""",
+        ),
+        (
+            system_no_order,
+            """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
+
+Input:
+{neighbors_section}
+
+Write one short sentence of reasoning in plain text only. No symbol is a default answer; let the concrete input instance determine the final choice. Do not use square brackets in the reasoning sentence.
+
+On the next line, write only the chosen symbol inside square brackets.""",
+        ),
+        (
+            system_no_order,
+            """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
+
+Input:
+{neighbors_section}
+
+Write one short sentence of reasoning in plain text only. Describe what the given input supports before choosing. Do not use square brackets in the reasoning sentence.
+
+On the next line, write only the chosen symbol inside square brackets.""",
+        ),
+        (
+            system_no_order,
+            """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
+
+Input:
+{neighbors_section}
+
+Think step by step briefly, then write one short reasoning sentence in plain text only. Treat symbol names as arbitrary labels with no built-in preference. Do not use square brackets in the reasoning sentence.
+
+On the next line, write only the chosen symbol inside square brackets.""",
+        ),
+        (
+            system_zk,
+            """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
+
+Input:
+{neighbors_section}
+
+Write one short sentence of reasoning in plain text only. The final choice should match that sentence, not the order in which symbols are written here. Do not use square brackets in the reasoning sentence.
+
+On the next line, write only the chosen symbol inside square brackets.""",
+        ),
+        (
+            system_no_order,
+            """Use the MEMORY section above as prior-round context when it is present. Use the CURRENT ROUND section as the present input. Do not quote or restate the opinion list.
+
+Input:
+{neighbors_section}
+
+Write one short sentence of reasoning in plain text only. First decide what the provided input indicates, then express only that selected symbol as the answer. Do not use square brackets in the reasoning sentence.
+
+On the next line, write only the chosen symbol inside square brackets.""",
+        ),
     ]
-    return [{"system": system, "user": user} for user in variants]
+    return [{"system": system, "user": user} for system, user in variants]
 
 
 def expand_seeds(seeds: str) -> list[int]:
@@ -507,37 +594,6 @@ def serialize_extract_eval(result: ExtractEval) -> dict[str, Any]:
     }
 
 
-def proposal_prompt(hint: str, current: dict[str, str], history: list[dict[str, Any]]) -> tuple[str, str]:
-    system = """You are optimizing a prompt for a controlled academic LLM experiment.
-
-Return only a YAML document with key v21_zero_shot_cot and nested string fields system and user.
-Make the smallest neutral prompt-only change that reduces token collapse.
-Do not add decision rules, counting policies, or token preferences."""
-    recent = json.dumps(history[-6:], ensure_ascii=False, indent=2)
-    user = f"""Research hint:
-
-{hint}
-
-Current prompt:
-
-```yaml
-v21_zero_shot_cot:
-  system: |
-{indent_block(current['system'], 4)}
-  user: |
-{indent_block(current['user'], 4)}
-```
-
-Recent evaluation history:
-
-```json
-{recent}
-```
-
-Return a revised YAML prompt. Preserve {{neighbors_section}}, MEMORY/CURRENT ROUND wording, and the final parseable output contract. Avoid duplicated instructions."""
-    return system, user
-
-
 def indent_block(text: str, spaces: int) -> str:
     pad = " " * spaces
     return "\n".join(pad + line for line in text.rstrip().splitlines())
@@ -558,7 +614,7 @@ def write_markdown_report(path: Path, record: dict[str, Any]) -> None:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Autoresearch for memory prompt bias reduction.")
-    parser.add_argument("--max-iters", type=int, default=20)
+    parser.add_argument("--max-iters", type=int, default=0, help="0 means evaluate all manual candidates")
     parser.add_argument("--llama-timeout-s", type=int, default=7200)
     parser.add_argument("--cross-timeout-s", type=int, default=7200)
     parser.add_argument("--extract-timeout-s", type=int, default=900)
@@ -597,24 +653,18 @@ def main(argv: list[str] | None = None) -> int:
     history: list[dict[str, Any]] = []
     best: dict[str, Any] | None = None
 
-    for idx in range(1, args.max_iters + 1):
+    max_iters = args.max_iters or len(candidates)
+    for idx in range(1, max_iters + 1):
         cand_path = candidate_dir / f"candidate_{idx:03d}.yaml"
         if idx <= len(candidates):
             candidate = candidates[idx - 1]
-            source = "seeded"
+            source = "manual"
         else:
-            system_prompt, user_prompt = proposal_prompt(hint, start, history)
-            raw = call_minimax(system_prompt, user_prompt)
-            write_text(candidate_dir / f"candidate_{idx:03d}_raw.txt", raw)
-            extracted = extract_yaml_block(raw)
-            if extracted is None:
-                record = {"iteration": idx, "source": "minimax", "status": "invalid_yaml"}
-                history.append(record)
-                write_markdown_report(eval_dir / f"candidate_{idx:03d}.md", record)
-                print(f"[ITER {idx}] invalid YAML", flush=True)
-                continue
-            candidate = extracted
-            source = "minimax"
+            record = {"iteration": idx, "source": "manual", "status": "no_manual_candidate"}
+            history.append(record)
+            write_markdown_report(eval_dir / f"candidate_{idx:03d}.md", record)
+            print(f"[ITER {idx}] no manual candidate", flush=True)
+            continue
 
         dump_prompt_yaml(candidate["system"], candidate["user"], cand_path)
         static_errors = validate_prompt(candidate["system"], candidate["user"])
