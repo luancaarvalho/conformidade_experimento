@@ -659,6 +659,7 @@ def write_markdown_report(path: Path, record: dict[str, Any]) -> None:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Autoresearch for memory prompt bias reduction.")
     parser.add_argument("--max-iters", type=int, default=0, help="0 means evaluate all manual candidates")
+    parser.add_argument("--start-index", type=int, default=1, help="1-based manual candidate index to start from")
     parser.add_argument("--llama-timeout-s", type=int, default=7200)
     parser.add_argument("--cross-timeout-s", type=int, default=7200)
     parser.add_argument("--extract-timeout-s", type=int, default=900)
@@ -698,7 +699,7 @@ def main(argv: list[str] | None = None) -> int:
     best: dict[str, Any] | None = None
 
     max_iters = args.max_iters or len(candidates)
-    for idx in range(1, max_iters + 1):
+    for idx in range(max(1, args.start_index), max_iters + 1):
         cand_path = candidate_dir / f"candidate_{idx:03d}.yaml"
         if idx <= len(candidates):
             candidate = candidates[idx - 1]
